@@ -1,0 +1,142 @@
+<script language="JavaScript">
+function validate(frm){
+
+	let name=frm.name.value;
+	let number=frm.phone.value;
+	let address=frm.add.value;
+	let status=frm.status.value;
+	let education=frm.edu.value;
+	
+	let location=frm.loc.value;
+
+	flag=true;
+
+	if(name==""){
+		alert("person name must be filled");
+		frm.name.focus();
+		flag=false;
+		}
+	if(number==""){
+alert("person number must be filled");
+frm.num.focus();
+flag=false;
+		}
+	else if(isNaN(number)){
+alert("person number must be a number type");
+frm.num.focus();
+flag=false;
+		}
+
+	if(address==""){
+alert("person address must be filled");
+frm.add.focus();
+flag=false;
+		}
+	if(status==""){
+alert("fill status ");
+frm.status.focus();
+flag=false;
+		}
+
+	if(location==""){
+alert("enter location");
+frm.loc.focus();
+flag=false;
+		}
+	if(education==""){
+alert("enter education details");
+frm.edu.focus();
+flag=false;
+		}
+	return flag;
+}
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body bgcolor="pink">
+
+<h1 style="color:red;text-align:center">Employee Entry....</h1>
+
+<form action="testurl" method="POST" onsubmit="validate this">
+
+<table border="2" align="center" bgcolor="transparent">
+
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name"></td>
+</tr>
+
+<tr>
+<td>Number:</td>
+<td><input type="text" name="num"></td>
+</tr>
+
+<tr>
+<td>Address:</td>
+<td><textarea rows="3" cols="6" placeholder="enter here" name="add">
+</textarea>
+</td>
+</tr>
+
+<tr>
+<td>Current Location:</td>
+<td><select name="loc">
+<option value="">---select---</option>
+<option value="Bengaluru">Bengaluru</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Kolkata">kolkata</option>
+<option value="Lucknow">Lucknow</option>
+<option value="Delhi">Delhi</option>
+</select>
+</td>
+<tr>
+<td>Education:</td>
+<td><select name="edu">
+<option value="">--select--</option>
+<option value="B-Tech">B.Tech</option>
+<option value="MCA">MCA</option>
+<option value="MCOM">MCOM</option>
+<option value="MTECH">Mtech</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Material Status:</td>
+<td>
+<input type="checkbox" name="status" value="Married">Married
+<input type="checkbox" name="status" value="Single">Single
+
+</td>
+</tr>
+
+
+
+<tr>
+
+
+<td>
+<input type="radio" value="MALE" name="gender">MALE
+<input type="radio" value="FEMALE
+" name="gender">FEMALE
+</td>
+</tr>
+
+
+<tr>
+<td>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
